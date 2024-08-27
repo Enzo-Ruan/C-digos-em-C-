@@ -1,0 +1,27 @@
+
+#include <stdio.h>
+
+int main(){
+    char nome[124];
+    int i;
+    int erradas = 0;
+    printf("Insira um nome: ");
+    scanf("%s", nome);
+
+    printf(" a terceira letra é %c", nome[2]);
+    for (i = 0; i < 124; i++) 
+    {
+        if (!( (nome[i] >= 'a') && (nome[i]  <= 'z'))) {
+            printf("a posicao %d nao e letra: %c", i, nome[i]);
+            erradas++;
+        }
+
+        if (nome[i] == '\0') {
+            break;
+        }
+    }
+ 
+    printf("Quantidade de erradas: %d \n", erradas);
+
+    return 0;
+}
